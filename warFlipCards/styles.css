@@ -1,0 +1,166 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: #005203;
+    background-image: url("https://www.transparenttextures.com/patterns/felt.png");
+    font-family: sans-serif;
+}
+.deck-grid-container { 
+    margin:0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 9rem);
+    grid-template-rows: 14rem 14rem;
+    gap: 1rem;
+    cursor: pointer;
+    padding: 20px;
+    justify-content: center;
+    align-content: center;
+}
+.deck{
+    height:100%;
+    width:100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border-radius: .5rem;
+    color:white;
+    user-select: none;
+    box-shadow: 10px 5px 5px black;
+    background-repeat: repeat;
+    background-color: black;
+    background-image: url(data:image/gif;base64,R0lGODlhJAAkAJEAAOjFsezdztOKbL5QKCH5BAAAAAAALAAAAAAkACQAAAL/HC4RAqm/mmLHyHmAbczB11Ea8ombJKSgKo6Z17pXFznmS1JptiX0z3vVhpEKDoUIkoa0olGIUeZUk1RI6Yn2mh/FDAt6frOrRRTqXPpsVLYugzxaVy+YcBdnoWPZOT0E4eckQtZFZBjWoHixQFWl6Nhol6R2p1Okt5TGaEWZA6fjiMdhZgPHeWrTWGVq+jTZg1HYyAEWKLYzmyiGKoUimilz+YYryyTlg5RcDJSAbNx0Q7lMcbIGEyzTK8zVdfVaImzs/QV+prYqWWW2ObkoOApM/Em/rUlIm7fijs8a2EEKEaZ3AsMUgneEU6RcpJbZ27aGHkAO2Ors8xQH1IR0Bn5YnOtVAAA7); /* image is "Pattern 069" from http://www.squidfingers.com/patterns/ */
+    background-image: -moz-repeating-linear-gradient(34% 6% 135deg,#0F1E59, #75A1BF, #3E3E63 50%);
+}
+.first-deck{
+
+    
+}
+.second-deck{
+    background-color: red;
+}
+.card-slot{
+
+}
+.back {
+    background-color: white;
+    position: relative;
+    font-size: 8rem;
+    height:100%;
+    width:100%;
+    border: 1px solid black;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 1px 1px black;
+
+}
+.card::before, .card::after {
+    position: absolute;
+    content: attr(data-value);
+    font-size: 1rem;
+}
+.card::before {
+    top:.5rem;
+    left:.5rem;
+}
+.card::after {
+    bottom:.5rem;
+    right: .5rem;
+    transform: rotate(180deg);
+}
+.card.red{
+    color:red;
+}
+.card.black{
+    color:black;
+}
+.win-display {
+    position:absolute;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    width:100vw;
+    height: 100vh;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    font-size: 2.5rem;
+}
+.win-display.show {
+    display:flex;
+    flex-direction: column;
+}
+.win-display > button {
+    font-size: 2rem;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 15px;
+    box-shadow: 1px 1px 1px black;
+}
+.win-display > button:hover{
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    box-shadow: 1px 1px 1px white;
+
+}
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 5px 2px 2px  black;
+    text-decoration: blink;
+}
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 320px;
+	height: 480px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}

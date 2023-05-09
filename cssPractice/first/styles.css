@@ -1,0 +1,16 @@
+.header {
+    text-align: center;
+}
+.green-background {
+    background-color: green;
+    color:white;
+}
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.cyan-text-color{
+    color:cyan;
+}
+.cross-out {
+    text-decoration: line-through;
+}

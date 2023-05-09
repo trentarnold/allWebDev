@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <title>expense tracker</title>
+</head>
+<body>
+  <div class="Header">
+    <h1>Expense Tracker</h1>
+    <div class='inputs'>
+      <input type="text" id="nameInput" placeholder="What did you purchase?">
+      <input type="date" id='date'>
+      <input type="number" id="expense" placeholder="How much?">
+    </div>
+  <button type="button"id='submit' class='btn btn-lg btn-success'name="button">submit</button>
+  </div>
+
+  <div class="tableDiv table-striped table-hover table-bordered">
+    <table class='table table-success'>
+      <tr>
+        <th>Poduct</th>
+      <th>Date</th>
+      <th>Price</th>
+    </tr>
+
+    </table>
+  </div>
+<div class='footer'>
+  <footer>Made by me</footer>
+</div>
+<script src="index.js" charset="utf-8"></script>
+</body>
+</html>

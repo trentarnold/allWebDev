@@ -1,0 +1,114 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+h1{
+  font-size: 2.5rem;
+  text-align: center;
+}
+p{
+  font-size: 1.5rem;
+  text-align: center;
+}
+body{
+  height: 100vh;
+  background: #52057b;
+}
+.modalBtn{
+  margin-left: 40%;
+  position: relative;
+  font-size: 1.25rem;
+}
+.modal {
+  display: hidden;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+.modalHeader, .modalFooter{
+  padding: 2px 16px;
+  background-color: #bc6ff1;
+  color: #52057b;
+}
+.modalBody {padding: 2px 16px;}
+.restart{
+  background-color: #bc6ff1;
+}
+.modalContent {
+  position: relative;
+  background-color: #52057b;
+  color: #bc6ff1;
+  margin: 20% auto;
+  border: 1px solid #888;
+  width: 80%;
+}
+.header{
+  text-align: center;
+  padding:15px;
+  line-height: 1.2;
+  color: #bc6ff1;
+}
+.fullContainer{
+  width:640px;
+  height:640px;
+  margin:auto;
+  display:flex;
+  flex-wrap:wrap;
+  background-color: #892cdc;
+}
+.imageDiv{
+  width: calc(25% - 10px);
+   height: calc(30% - 10px);
+   margin: 5px;
+   position: relative;
+   box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+   transform: scale(1);
+   transform-style: preserve-3d;
+   transition: transform 1s;
+}
+.start,
+.image1,
+.image2,
+.image3,
+.image4,
+.image5,
+.image6,
+.image7,
+.image8,
+.image9,
+.image10,
+.image11,
+.image12{
+   width: 100%;
+   height: 100%;
+   padding: 20px;
+   position: absolute;
+   border-radius: 5px;
+   background: #bc6ff1;
+   backface-visibility: hidden;
+}
+
+.imageDiv.flip{
+  transform: rotateY(180deg);
+}
+.image1,
+.image2,
+.image3,
+.image4,
+.image5,
+.image6,
+.image7,
+.image8,
+.image9,
+.image10,
+.image11,
+.image12{
+  transform:rotateY(180deg);
+}

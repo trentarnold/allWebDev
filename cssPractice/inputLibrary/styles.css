@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+.input{
+    border: 1px solid hsl(0, 0%, 70%);
+    outline: none;
+    padding: .45em .5em;
+    border-radius: .3em;  
+    margin: 5px;
+}
+.input:hover, .input:focus {
+    border: 1px solid rgb(80, 191, 235);
+    box-shadow: 0 0 5px 0 rgb(80, 191, 235);
+}
+.input.success {
+    border: 1px solid hsl(120, 79%, 39%);
+}
+.input.success:hover, .input.success:hover {
+    box-shadow: 0 0 5px hsl(120, 79%, 39%);
+}
+.input.error {
+    border:1px solid hsl(0, 79%, 37%);
+}
+.input.error:hover, .input.error:hover {
+    box-shadow: 0 0 5px hsl(0, 79%, 37%);
+}
+.input.large {
+    font-size: 1.25rem;
+}
+.input.small {
+    font-size: .75rem;
+}
+.input.disabled {
+    background-color: hsl(0, 0%, 90%);
+    outline:none;
+    cursor:not-allowed;
+}
+.input.disabled:hover, .input.disabled:hover {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid hsl(0, 0%, 70%);
+}
+

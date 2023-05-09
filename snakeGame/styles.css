@@ -1,0 +1,29 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #000;
+    height: 100vh;
+    width: 100vw;
+}
+.game-board {
+    display: grid;
+    background-color: #ccc;
+    grid-template-columns: repeat(21, 1fr);
+    grid-template-rows: repeat(21, 1fr);
+    height: 100vmin;
+    width: 100vmin;
+}
+.snake {
+    background-color: hsl(200, 100%, 50%);
+    border: .25vmin solid black;
+}
+.food-piece {
+    background-color: hsl(50, 100%, 50%);
+    border: .25vim solid black;
+}
